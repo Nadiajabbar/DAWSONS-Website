@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart | DAWSONS Dry Fruits</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.cart{
+    width:90%;
+    margin:50px auto;
+}
+
+.cart h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#8B5A2B;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+table img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.qty-btn{
+    padding:6px 12px;
+    cursor:pointer;
+    border:none;
+    background:#8B5A2B;
+    color:white;
+    margin:0 5px;
+    border-radius:5px;
+}
+
+.remove-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.checkout{
+    margin-top:30px;
+    padding:15px 35px;
+    background:#8B5A2B;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.checkout:hover{
+    background:#6b431e;
+}
+
+#grandTotal{
+    text-align:right;
+    margin-top:25px;
+    font-size:28px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+DAWSONS
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="cart">
+
+<h1>Shopping Cart</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>Quantity</th>
+
+<th>Total</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="cartItems">
+
+</tbody>
+
+</table>
+
+<h2 id="grandTotal"></h2>
+
+<button class="checkout"
+onclick="window.location.href='checkout.html'">
+Proceed To Checkout
+</button>
+
+</section>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function displayCart(){
+
+let table=document.getElementById("cartItems");
+
+table.innerHTML="";
+
+let grandTotal=0;
+
+cart.forEach((item,index)=>{
+
+let total=item.price*item.quantity;
+
+grandTotal+=total;
+
+table.innerHTML+=`
+
+<tr>
+
+<td>
+<img src="${item.image}">
+</td>
+
+<td>${item.name}</td>
+
+<td>Rs. ${item.price}</td>
+
+<td>
+
+<button class="qty-btn" onclick="decrease(${index})">-</button>
+
+${item.quantity}
+
+<button class="qty-btn" onclick="increase(${index})">+</button>
+
+</td>
+
+<td>Rs. ${total}</td>
+
+<td>
+
+<button class="remove-btn" onclick="removeItem(${index})">
+
+Remove
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+document.getElementById("grandTotal").innerHTML=
+"Grand Total : Rs. "+grandTotal;
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+}
+
+function increase(index){
+
+cart[index].quantity++;
+
+displayCart();
+
+}
+
+function decrease(index){
+
+if(cart[index].quantity>1){
+
+cart[index].quantity--;
+
+}else{
+
+cart.splice(index,1);
+
+}
+
+displayCart();
+
+}
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+displayCart();
+
+}
+
+displayCart();
+
+</script>
+
+</body>
+
+</html>

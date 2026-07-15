@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | Dawsons Dry Fruits</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f8f8f8;
+margin:0;
+}
+
+.checkout-container{
+width:90%;
+margin:40px auto;
+display:flex;
+gap:30px;
+}
+
+.customer{
+width:45%;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.customer h2{
+margin-bottom:20px;
+}
+
+.customer input,
+.customer textarea,
+.customer select{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+
+}
+
+.summary{
+
+width:55%;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+.summary table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+.summary th{
+
+background:#8B5A2B;
+color:white;
+padding:12px;
+
+}
+
+.summary td{
+
+padding:12px;
+text-align:center;
+border-bottom:1px solid #ddd;
+
+}
+
+.summary img{
+
+width:70px;
+height:70px;
+border-radius:8px;
+object-fit:cover;
+
+}
+
+.total-box{
+
+margin-top:20px;
+font-size:20px;
+line-height:40px;
+
+}
+
+.place-btn{
+
+width:100%;
+padding:15px;
+font-size:18px;
+background:#8B5A2B;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-top:20px;
+
+}
+
+.place-btn:hover{
+
+background:#6b431e;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+Dawsons
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div class="checkout-container">
+
+<div class="customer">
+
+<h2>Customer Details</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<textarea id="address" rows="5" placeholder="Delivery Address"></textarea>
+
+<select id="payment">
+
+<option>Cash On Delivery</option>
+
+<option>Debit / Credit Card</option>
+
+</select>
+
+</div>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Product</th>
+
+<th>Qty</th>
+
+<th>Total</th>
+
+</tr>
+
+</thead>
+
+<tbody id="checkoutItems">
+
+</tbody>
+
+</table>
+
+<div class="total-box">
+
+<p id="subtotal"></p>
+
+<p>Delivery Charges : Rs. 200</p>
+
+<h2 id="grandTotal"></h2>
+
+</div>
+
+<button class="place-btn" onclick="placeOrder()">
+
+Place Order
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let table = document.getElementById("checkoutItems");
+
+let subtotal = 0;
+
+cart.forEach(item=>{
+
+let total=item.price*item.quantity;
+
+subtotal+=total;
+
+table.innerHTML+=`
+
+<tr>
+
+<td>
+
+<img src="${item.image}">
+
+</td>
+
+<td>${item.name}</td>
+
+<td>${item.quantity}</td>
+
+<td>Rs. ${total}</td>
+
+</tr>
+
+`;
+
+});
+
+document.getElementById("subtotal").innerHTML=
+"Subtotal : Rs. "+subtotal;
+
+let delivery=200;
+
+document.getElementById("grandTotal").innerHTML=
+"Grand Total : Rs. "+(subtotal+delivery);
+
+function placeOrder(){
+
+let name=document.getElementById("name").value;
+
+let phone=document.getElementById("phone").value;
+
+let address=document.getElementById("address").value;
+
+if(name=="" || phone=="" || address==""){
+
+alert("Please fill all required fields.");
+
+return;
+
+}
+
+alert("🎉 Thank you "+name+"!\n\nYour order has been placed successfully.");
+
+localStorage.removeItem("cart");
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

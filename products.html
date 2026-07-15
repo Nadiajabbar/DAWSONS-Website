@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | DAWSONS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>DAWSONS</span>
+            </div>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="products.html">Products</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="cart.html">Cart</a></li>
+
+                <li><a href="login.html">Login</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Products -->
+
+    <section class="products">
+
+        <h2>Our Premium Dry Fruits</h2>
+
+        <div class="product-container">
+
+            <!-- Almond -->
+
+            <div class="card" id="almond">
+
+                <img src="images/almond.jpg" alt="Almond">
+
+                <h3>Almond</h3>
+
+                <p>Rs. 1800 / KG</p>
+
+                <button onclick="addToCart('Almond',1800,'images/almond.jpg')">
+                    Add To Cart
+                </button>
+
+            </div>
+
+            <!-- Cashew -->
+
+            <div class="card" id="cashew">
+
+                <img src="images/cashew.jpg" alt="Cashew">
+
+                <h3>Cashew</h3>
+
+                <p>Rs. 2500 / KG</p>
+
+                <button onclick="addToCart('Cashew',2500,'images/cashew.jpg')">
+                    Add To Cart
+                </button>
+
+            </div>
+
+            <!-- Pistachio -->
+
+            <div class="card" id="pista">
+
+                <img src="images/pista.jpg" alt="Pistachio">
+
+                <h3>Pistachio</h3>
+
+                <p>Rs. 3200 / KG</p>
+
+                <button onclick="addToCart('Pistachio',3200,'images/pista.jpg')">
+                    Add To Cart
+                </button>
+
+            </div>
+
+            <!-- Walnut -->
+
+            <div class="card" id="walnut">
+
+                <img src="images/walnut.jpg" alt="Walnut">
+
+                <h3>Walnut</h3>
+
+                <p>Rs. 2100 / KG</p>
+
+                <button onclick="addToCart('Walnut',2100,'images/walnut.jpg')">
+                    Add To Cart
+                </button>
+
+            </div>
+
+            <!-- Dates -->
+
+            <div class="card" id="dates">
+
+                <img src="images/dates.jpg" alt="Dates">
+
+                <h3>Dates</h3>
+
+                <p>Rs. 900 / KG</p>
+
+                <button onclick="addToCart('Dates',900,'images/dates.jpg')">
+                    Add To Cart
+                </button>
+
+            </div>
+
+            <!-- Raisins -->
+
+            <div class="card" id="raisins">
+
+                <img src="images/raisins.jpg" alt="Raisins">
+
+                <h3>Raisins</h3>
+
+                <p>Rs. 1100 / KG</p>
+
+                <button onclick="addToCart('Raisins',1100,'images/raisins.jpg')">
+                    Add To Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>DAWSONS</h3>
+
+        <p>Premium Quality Dry Fruits</p>
+
+        <p>© 2026 DAWSONS. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>DAWSONS</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+      
+
+</head>
+<!-- Navbar -->
+ <body>
+
+<header>
+
+<nav class="navbar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+        <span>DAWSONS</span>
+    </div>
+
+    <!-- Search Box -->
+
+    <div class="search-box">
+
+        <input type="text" id="search" placeholder="Search Dry Fruits...">
+
+        <button onclick="searchProduct()">🔍</button>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="products.html">Products</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        <!-- Cart -->
+
+        <li class="cart-icon">
+
+            <a href="cart.html">
+                🛒 Cart <span id="cart-count">0</span>
+            </a>
+
+            <div class="mini-cart" id="mini-cart">
+
+                <h4>Your Cart</h4>
+
+                <div id="mini-items"></div>
+
+                <p id="mini-total"></p>
+
+                <a href="cart.html" class="view-cart">
+                    View Cart
+                </a>
+
+            </div>
+
+        </li>
+
+        <li><a href="login.html">Login</a></li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+    <div class="slide active"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Premium Quality Dry Fruits</h1>
+        <p>Healthy • Fresh • Organic</p>
+
+        <a href="products.html" class="btn">Shop Now</a>
+    </div>
+
+</section>
+
+
+  
+    <!-- WHY CHOOSE DAWSONS -->
+
+<!-- BEST SELLING PRODUCTS -->
+
+<section class="best-selling">
+
+    <h2>Best Selling Products</h2>
+    <p>Our customers' favorite premium dry fruits.</p>
+
+    <div class="best-container">
+
+        <div class="best-card">
+            <img src="images/almond.jpg">
+            <h3>Almonds</h3>
+            <p>Rs. 1800 / KG</p>
+            <button onclick="location.href='products.html'">Shop Now</button>
+        </div>
+
+        <div class="best-card">
+            <img src="images/cashew.jpg">
+            <h3>Cashews</h3>
+            <p>Rs. 2500 / KG</p>
+            <button onclick="location.href='products.html'">Shop Now</button>
+        </div>
+
+        <div class="best-card">
+            <img src="images/pista.jpg">
+            <h3>Pistachios</h3>
+            <p>Rs. 3200 / KG</p>
+            <button onclick="location.href='products.html'">Shop Now</button>
+        </div>
+
+        <div class="best-card">
+            <img src="images/walnut.jpg">
+            <h3>Walnuts</h3>
+            <p>Rs. 2100 / KG</p>
+            <button onclick="location.href='products.html'">Shop Now</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- WHY CHOOSE DAWSONS -->
+
+<section class="why-us">
+
+    <h2>Why Choose Dawsons?</h2>
+
+    <div class="why-container">
+
+        <div class="why-box">
+           
+            <h3>100% Natural</h3>
+            <p>Fresh and naturally sourced premium dry fruits.</p>
+        </div>
+
+        <div class="why-box">
+            
+            <h3>Fast Delivery</h3>
+            <p>Quick and safe delivery all over Pakistan.</p>
+        </div>
+
+        <div class="why-box">
+           
+            <h3>Premium Quality</h3>
+            <p>High quality products with guaranteed freshness.</p>
+        </div>
+
+        <div class="why-box">
+          
+            <h3>Secure Payment</h3>
+            <p>Safe payment methods with customer trust.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- SPECIAL OFFER -->
+
+<section class="offer">
+
+    <div class="offer-content">
+
+        <h1>UP TO 30% OFF</h1>
+
+        <h2>Premium Dry Fruits Collection</h2>
+
+        <p>Healthy • Fresh • Organic</p>
+
+        <a href="products.html" class="offer-btn">Shop Now</a>
+
+    </div>
+
+</section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>Dry Fruits Store</h3>
+
+        <p>
+
+            Fresh Dry Fruits Delivered To Your Doorstep.
+
+        </p>
+
+        <p>
+
+            © 2026 All Rights Reserved.
+
+        </p>
+
+    </footer>
+    <script src="js/script.js" defer></script>
+
+</body>
+
+</html>
