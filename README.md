@@ -91,27 +91,27 @@ Simply open **index.html** in your web browser.
 ## 📸 Screenshots
 <br>Home Page<br>
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/af1a55c6-ca5d-4eae-9bcf-0b6af80c26e7" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/af1a55c6-ca5d-4eae-9bcf-0b6af80c26e7" />
 
 <br>Products<br>
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/478ab254-b3b3-424a-a84a-ddb835536f6e" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/478ab254-b3b3-424a-a84a-ddb835536f6e" />
 
 <br>Contact<br>
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/d950fe50-8e2b-480a-8bbc-8a6b45989e62" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/d950fe50-8e2b-480a-8bbc-8a6b45989e62" />
 
 <br>Cart<br>
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/552efb78-fa08-4fe9-88d7-9e5104d2b988" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/552efb78-fa08-4fe9-88d7-9e5104d2b988" />
 
 <br>Proceed to Checkout<br>
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/5f8d57da-681e-4dd6-8d73-dfa4df7b827b" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/5f8d57da-681e-4dd6-8d73-dfa4df7b827b" />
 
 <br>login page<br>
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/74efa80a-39c2-48b6-b1b6-a4ebf35b4bde" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/74efa80a-39c2-48b6-b1b6-a4ebf35b4bde" />
 
 
 
